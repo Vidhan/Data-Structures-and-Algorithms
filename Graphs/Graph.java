@@ -136,10 +136,10 @@ public class Graph {
 		System.out.print(source.vertexNumber + " ");
 		visited[source.vertexNumber]=true;
 		Iterator<Vertex> adjacentVertices = source.adjacencyList.listIterator();
-	    while (adjacentVertices.hasNext()){
-	    	Vertex adjacentVertex = adjacentVertices.next();
-	    	if (!visited[adjacentVertex.vertexNumber])
-	                DFSUtil(adjacentVertex, visited);
+	    	while (adjacentVertices.hasNext()){
+	    		Vertex adjacentVertex = adjacentVertices.next();
+	    		if (!visited[adjacentVertex.vertexNumber])
+	                	DFSUtil(adjacentVertex, visited);
 	        }
 	}
 	
