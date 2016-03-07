@@ -62,12 +62,6 @@ class VertexWithDistance implements Comparator<VertexWithDistance>
     }
 }
 
-class Tester{
-	public static void main(String...  args){
-	//	PriorityQueue<VertexWithDistance> = new PriorityQueue<VertexWithDistance>();
-		
-	}
-}
 public class WeightedGraph {
 	ArrayList<VertexWeighted> vertexSet;
 	
