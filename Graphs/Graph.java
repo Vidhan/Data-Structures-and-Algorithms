@@ -99,6 +99,7 @@ public class Graph {
 	}
 	
 	void topologicalSortforDAGsWithoutDFS(){
+		//Maintain a list with vertices whose inDegree is 0
 		int inDegree[] = new int[vertexSet.size()];
 		for (Vertex v:vertexSet){
 			inDegree[v.vertexNumber]=0;
