@@ -8,10 +8,10 @@ Searching Algorithms
 
 Sorting Algorithms
 
-| Algorithm     | Worst-case time   | Best-case    | Worst-case swaps|
+| Algorithm     | Worst-case time   | Best-case time   | Average-case time|Worst-case swaps| In-Place?
 | ------------- |:-------------:| :-----------:|----------------|
-| Selection sort | Theta(n)          | Theta(1)         | no             |
-| Insertion sort | Theta(lgn)        | Theta(1)         | yes            |
-|Merge sort | Theta(n)          | Theta(1)         | no             |
-| Quicksort | Theta(lgn)        | Theta(1)         | yes            |
+| Selection sort | Theta(n^2)          | Theta(n^2)         | no             |
+| Insertion sort | Theta(n^2)        | Theta(n)         | yes            |
+|Merge sort | Theta(nlgn)          | Theta(nlgn)         | no             |
+| Quicksort | Theta(n^2)        | Theta(nlgn)         | yes            |
 
