@@ -229,6 +229,7 @@ public class Sorter {
 		}
 	}
 	
+	//O(n), cant say 0(n) because in best case it takes 0(1) time
 	static int linearSearch(int[] array, int x){
 		int i = 0;
 		int answer = -1;
