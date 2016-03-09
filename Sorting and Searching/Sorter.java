@@ -6,11 +6,12 @@ public class Sorter {
 		int input2[] = {10,2,9,5,8,0,-4,100,-5};
 		int input3[] = {10,2,9,5,8,0,-4,100,-5};
 		int input4[] = {10,2,9,5,8,0,-4,100,-5};
+		int input5[] = {10,2,9,5,8,0,-4,100,-5};
 		
 		long timeBeforeSelection = System.nanoTime();
 		int answer1[]=selectionSort(input1);
 		long timeAfterSelection = System.nanoTime();
-
+		
 		long timeBeforeInsertion = System.nanoTime();
 		int answer2[]=insertionSort(input2);
 		long timeAfterInsertion = System.nanoTime();
@@ -44,8 +45,9 @@ public class Sorter {
 		System.out.println("Time for MergeSort: "+(timeAfterMergeSort-timeBeforeMergeSort)+"ns");
 		System.out.println("Time for QuickSort: "+(timeAfterQuickSort-timeBeforeQuickSort)+"ns");
 		
-		System.out.print(recursiveBinarySearch(input4,0,input4.length-1, -5)+" ");
-
+		System.out.println(recursiveBinarySearch(input4,0,input4.length-1, -5)+" ");
+		System.out.println(sentinelLinearSearch(input5, 100));
+		System.out.println(recursiveLinearSearch(input5, 0,100));
 
 	}
 	
@@ -189,7 +191,9 @@ public class Sorter {
 		
 	}
 	
-	//binarySearch
+	//binarySearch - array needs to be sorted
+	//Worst-case: 0(lgn), Best-case: 0(1)
+	//All cases- O(lgn)
 	static int binarySearch(int[] array, int x){
 		int start = 0;
 		int end = array.length-1;
@@ -223,6 +227,49 @@ public class Sorter {
 		} else{
 			return recursiveBinarySearch(array,mid+1,high,x);
 		}
+	}
+	
+	//
+	static int linearSearch(int[] array, int x){
+		int i = 0;
+		int answer = -1;
+		while(i <array.length){ //we can avoid this calculation which is happening multiple times(sentinelLinearSearch)
+			if (array[i]==x){
+				answer = i;
+				break;
+			}
+		}
+		return answer;
+	}
+	
+	//better than linearSearch
+	static int sentinelLinearSearch(int[] array, int x){
+		int i=0;
+		int last=array[array.length-1];
+		array[array.length-1]=x;
+		while(x!=array[i]){
+			i++;
+		}
+		array[array.length-1]=last;
+		if (i < array.length - 1 || last==x){
+			return i;
+		} else{
+			return -1;
+		}
+		
+	}
+	
+	//recursive linear search
+	static int recursiveLinearSearch(int[] array, int indexToCheck, int x){
+		if (indexToCheck>array.length-1){
+			return -1;
+		} 
+		if (array[indexToCheck]==x){
+			return indexToCheck;
+		} else{
+			return recursiveLinearSearch(array, indexToCheck+1, x);
+		}
+		
 	}
 
 }
