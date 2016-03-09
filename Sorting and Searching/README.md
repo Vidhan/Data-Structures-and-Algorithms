@@ -15,4 +15,5 @@ Sorting Algorithms
 |Merge sort | Theta(nlgn)          | Theta(nlgn)         | Theta(nlgn)|Theta(nlgn)|no             |
 | Quicksort | Theta(n^2)        | Theta(nlgn)         | Theta(nlgn)|Theta(n^2)|yes            |
 
-Randomised QuickSort is essentially the champ for large datasets.
+Randomised QuickSort is essentially the champ for large datasets. Can we beat it? 
+Note: Insertion sort works well when no element has to move very far in the array. Once the subproblem sizes in the recursive quicksort gets down to some size k, no element has to move more than k-1 positions. Instead of continuing to call randomised quicksort once the subproblem sizes become sufficiently small, if we run the insertion over of the subarray, we can sort even faster than randomized quicksort.
