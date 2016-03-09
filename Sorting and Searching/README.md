@@ -2,8 +2,8 @@ Searching Algorithms
 
 | Algorithm     | Worst-case time   | Best-case  time  | Requires sorted array?|
 | ------------- |:-------------:| :-----------:|:--------------:|
-| Linear Search | Theta(n)          | Theta(1)         | no             |
-| Binary Search | Theta(lgn)        | Theta(1)         | yes            |
+| Linear Search |  θ (n)          | Theta(1)         | no             |
+| Binary Search | (lgn)        | Theta(1)         | yes            |
 
 
 Sorting Algorithms
