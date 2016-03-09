@@ -229,7 +229,6 @@ public class Sorter {
 		}
 	}
 	
-	//
 	static int linearSearch(int[] array, int x){
 		int i = 0;
 		int answer = -1;
@@ -242,7 +241,7 @@ public class Sorter {
 		return answer;
 	}
 	
-	//better than linearSearch
+	//better than linearSearch in terms of constants
 	static int sentinelLinearSearch(int[] array, int x){
 		int i=0;
 		int last=array[array.length-1];
