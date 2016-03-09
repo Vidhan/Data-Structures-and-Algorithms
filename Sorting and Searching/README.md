@@ -15,3 +15,4 @@ Sorting Algorithms
 |Merge sort | Theta(nlgn)          | Theta(nlgn)         | Theta(nlgn)|Theta(nlgn)|no             |
 | Quicksort | Theta(n^2)        | Theta(nlgn)         | Theta(nlgn)|Theta(n^2)|yes            |
 
+Randomised QuickSort is essentially the champ for large datasets.
