@@ -1,7 +1,7 @@
 Searching Algorithms
 
 | Algorithm     | Worst-case time   | Best-case  time  | Requires sorted array?|
-| ------------- |:-------------:| :-----------:|----------------|
+| ------------- |:-------------:| :-----------:|:--------------:|
 | Linear Search | Theta(n)          | Theta(1)         | no             |
 | Binary Search | Theta(lgn)        | Theta(1)         | yes            |
 
