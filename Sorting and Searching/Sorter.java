@@ -271,5 +271,41 @@ public class Sorter {
 		}
 		
 	}
+	
+	//Counting sort 
+	//assuming range of values is from 0 to m-1
+	//if values were real numbers with fractional parts, we couldn't have used this sort
+	//Running time - 0(n) 
+	//It is a stable sort
+	static int[] countingSort(int input[], int m){
+		int answer[] = new int[input.length];
+		int freq[] = new int[m];
+		int next[] = new int[m];
+		Arrays.fill(freq, 0);
+		
+		//count freq
+		for (int value : input){
+			freq[value]++;
+		}
+		
+		//number of elements lesser than the value
+		for (int i=0; i<m;i++){
+			if (i==0){
+				next[i]=0;
+			} else{
+				next[i] = next[i-1]+freq[i-1];
+			}
+			
+		}
+		
+		//filling up answer array
+		for (int i=0; i<input.length; i++){
+			answer[next[input[i]]]=input[i];
+			next[input[i]]++;
+		}
+		
+		return answer;
+		
+	}
 
 }
